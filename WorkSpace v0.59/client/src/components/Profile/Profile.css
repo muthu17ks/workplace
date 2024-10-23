@@ -1,0 +1,127 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background-color);
+}
+
+.profile-inner-container {
+  height: 87.5vh;
+  padding: 20px;
+  width: 600px;
+  max-width: 600px;
+  margin: 10vh auto 0;
+  background-color: var(--background-color);
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.profile-inner-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.profile-inner-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.profile-inner-container::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+
+.profile-inner-container::-webkit-scrollbar-thumb:hover {
+  background: #5c8c8b;
+}
+
+.profile-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: var(--accent-color);
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-error-message {
+  color: red;
+  margin-bottom: 15px;
+}
+
+.profile-details {
+  margin-top: 10px;
+}
+
+.profile-field {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-field label {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.profile-field input,
+.profile-field textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #c7ded9;
+  border-radius: 6px;
+  background-color: #c5dfda72;
+  color: var(--text-color);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-field input:focus,
+.profile-field textarea:focus {
+  background-color: #c7ded9;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 5px #c7ded9;
+  outline: none;
+}
+
+.profile-field input:hover,
+.profile-field textarea:hover {
+  background-color: #c7ded9;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 5px #c7ded9;
+  outline: none;
+}
+
+.profile-actions {
+  margin-top: 20px;
+}
+
+.profile-logout-button,
+.profile-delete-button,
+.profile-password-update-button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  cursor: var(--hand-cursor);
+  transition: 0.3s ease;
+}
+
+.profile-logout-button:hover,
+.profile-delete-button:hover,
+.profile-password-update-button:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.profile-loading-message {
+  font-size: 16px;
+  color: var(--text-color);
+}

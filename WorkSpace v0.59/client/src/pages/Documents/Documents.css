@@ -1,0 +1,386 @@
+.docs-container {
+  margin-top: 7.5vh;
+  display: flex;
+  justify-content: center;
+  min-height: 92.5vh;
+  background-color: var(--background-color);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+}
+
+.docs-content-wrapper {
+  max-width: 800px;
+  width: 100%;
+  background-color: var(--background-color);
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.docs-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+  color: var(--primary-color);
+}
+
+.docs-recent-doc-title {
+  margin-bottom: 10px;
+}
+
+.docs-back-arrow,
+.docs-forward-button {
+  font-size: 24px;
+  color: var(--accent-color);
+  cursor: var(--docshand-cursor);
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.docs-refresh-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: var(--docshand-cursor);
+  color: var(--accent-color);
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.docs-search-container {
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+}
+
+.docs-search-input {
+  padding: 12px 45px 12px 60px;
+  font-size: 16px;
+  border: 1px solid var(--accent-color);
+  border-radius: 24px;
+  width: 100%;
+  transition: box-shadow 0.2s ease-in-out;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.docs-search-input:focus {
+  outline: none;
+  box-shadow: 0 0 3px var(--accent-color);
+}
+
+.docs-search-icon {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  font-size: 24px;
+  color: var(--accent-color);
+  pointer-events: none;
+  user-select: none;
+}
+
+.docs-new-doc-button {
+  border: none;
+  display: flex;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  user-select: none;
+  gap: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(119, 171, 174, 0.31), 0 2px 4px -1px rgba(119, 171, 174, 0.17);
+  transition: all 0.6s ease;
+}
+
+.docs-new-doc-button:hover {
+  box-shadow: 0 10px 15px -3px rgba(119, 171, 174, 0.31), 0 4px 6px -2px rgba(119, 171, 174, 0.17);
+}
+
+.docs-new-doc-button:focus,
+.docs-new-doc-button:active {
+  opacity: 0.85;
+  box-shadow: none;
+}
+
+.docs-new-doc-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.docs-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--accent-color);
+  padding: 15px;
+  font-weight: bold;
+  color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.docs-list-header-item {
+  flex: 1;
+  text-align: center;
+}
+
+.docs-list-header-item:first-child {
+  text-align: left;
+}
+
+.docs-list-header-item:last-child {
+  text-align: right;
+}
+
+.docs-list-header-item:hover {
+  cursor: pointer;
+}
+
+.docs-recent-doc-list {
+  height: 60vh;
+  overflow-y: auto;
+  list-style-type: none;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) var(--background-color);
+}
+
+.docs-recent-doc-list::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--background-color);
+}
+
+.docs-recent-doc-list::-webkit-scrollbar-track {
+  background-color: var(--background-color);
+  border-radius: 10px;
+}
+
+.docs-recent-doc-list::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  border: 2px solid var(--background-color);
+}
+
+.docs-recent-doc-list::-webkit-scrollbar-thumb:hover {
+  background-color: var(--background-color);
+}
+
+.docs-recent-doc-list li {
+  margin: 10px 0;
+  padding: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  background-color: var(--select-item-color);
+}
+
+.docs-recent-doc-list li:hover {
+  background-color: var(--select-item-hover);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.docs-recent-doc-list a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 500;
+  display: block;
+  height: 100%;
+}
+
+.docs-recent-doc-list a:hover {
+  color: var(--text-color);
+}
+
+.docs-doc-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: var(--docshand-cursor);
+}
+
+.docs-doc-name {
+  font-weight: bold;
+  color: var(--text-color);
+  cursor: var(--docshand-cursor);
+}
+
+.docs-doc-timestamp {
+  font-size: 0.9em;
+  color: var(--text-color);
+  cursor: var(--docshand-cursor);
+}
+
+.docs-search-actions {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.docs-back-arrow:hover,
+.docs-forward-button:hover {
+  animation: scaleRotate 0.3s ease-in-out;
+  transform: scale(1.2);
+}
+
+.docs-refresh-button:hover {
+  animation: pulse 0.6s infinite;
+  transform: scale(1.2);
+}
+
+.docs-context-menu {
+  position: absolute;
+  background-color: var(--background-color);
+  border: 1px solid gray;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 10px;
+  min-width: 150px;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0.9;
+}
+
+.docs-context-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.docs-context-menu li {
+  padding: 10px;
+  cursor: var(--docshand-cursor);
+  transition: background-color 0.2s ease-in-out;
+  color: var(--text-color);
+}
+
+.docs-context-menu li:hover {
+  background-color: var(--select-item-hover);
+  color: var(--text-color);
+}
+
+.rename-input-container {
+  position: fixed; /* Use fixed positioning */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to truly center it */
+  background-color: white; /* Background color */
+  border: 1px solid var(--accent-color); /* Optional border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding for the content */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.rename-input-container input {
+  margin-right: 10px;
+  padding: 8px; /* Increased padding for better usability */
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  width: 200px; /* Set a width for the input */
+}
+
+.rename-input-container button {
+  padding: 8px 12px; /* Padding for buttons */
+  border: none;
+  background-color: var(--accent-color);
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.rename-input-container button:hover {
+  background-color: var(--accent-color-hover); /* Adjust for hover effect */
+}
+
+
+@media (max-width: 600px) {
+  .docs-content-wrapper {
+    padding: 15px;
+  }
+  .docs-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .docs-search-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .docs-search-container {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .docs-action-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .docs-new-doc-button,
+  .docs-refresh-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .docs-search-icon {
+    left: 15px;
+    top: 12px;
+    font-size: 20px;
+  }
+  .docs-refresh-button {
+    display: inline-flex;
+    width: fit-content;
+  }
+  .docs-doc-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .docs-doc-name {
+    font-weight: bold;
+    margin-top: 5px;
+    color: var(--text-color);
+  }
+  .docs-doc-timestamp {
+    font-size: 0.8em;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .docs-content-wrapper {
+    padding: 20px;
+  }
+  .docs-search-actions {
+    flex-direction: row;
+    align-items: center;
+  }
+  .docs-search-container {
+    margin-right: 10px;
+    width: 100%;
+  }
+  .docs-action-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+  .docs-new-doc-button,
+  .docs-refresh-button {
+    margin-left: 10px;
+    margin-bottom: 0;
+  }
+  .docs-doc-icons-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .docs-doc-icons-cover > .docs-new-doc-button,
+  .docs-refresh-button {
+    margin: 0px;
+  }
+}

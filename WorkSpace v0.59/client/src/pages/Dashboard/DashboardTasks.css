@@ -1,0 +1,85 @@
+.dashboard-tasks-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.dashboard-tasks-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: var(--accent-color);
+}
+
+.dashboard-tasks-no-tasks {
+  color: #999;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.dashboard-tasks-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) var(--background-color);
+}
+
+.dashboard-tasks-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dashboard-tasks-list::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 8px;
+}
+
+.dashboard-tasks-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 9px;
+  background-color: var(--select-item-color);
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-tasks-item:hover {
+  background-color: var(--select-item-hover);
+}
+
+.dashboard-tasks-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+.dashboard-tasks-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.dashboard-tasks-due-date {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 4px;
+}
+
+.dashboard-tasks-completed .dashboard-tasks-text {
+  text-decoration: line-through;
+  color: #a0a0a0;
+}
+
+.dashboard-tasks-loading {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+}

@@ -1,0 +1,76 @@
+/* :root {
+  --background-color: #EEEEEE;
+  --accent-color: #76ABAE;
+  --primary-color: #31363F;
+  --text-color: #222831;
+  --select-item-color: #76ABAE15;
+  --select-item-hover: #76ABAE50;
+  --hand-cursor: url("./assets/icons/hand-cursor.png"), auto;
+} */
+
+:root {
+  --background-color: #EEEEEE;
+  --accent-color: #00ADB5;
+  --primary-color: #393E46;
+  --text-color: #222831;
+  --select-item-color: #00acb514;
+  --select-item-hover: #00acb52b;
+  --hand-cursor: url("./assets/icons/hand-cursor.png"), auto;
+}
+
+/* :root {
+  --background-color: #EEEEEE;
+  --accent-color: #4ECCA3;
+  --primary-color: #393E46;
+  --text-color: #232931;
+  --select-item-color: #4ecca215;
+  --select-item-hover: #4ecca230;
+  --hand-cursor: url("./assets/icons/hand-cursor.png"), auto;
+} */
+
+/* :root {
+  --background-color: #F1EEE9;
+  --accent-color: #EC994B;
+  --primary-color: #73777B;
+  --text-color: #15133C;
+  --select-item-color: #ec994b16;
+  --select-item-hover: #ec994b25;
+  --hand-cursor: url("./assets/icons/hand-cursor.png"), auto;
+} */
+
+/* :root {
+  --background-color: #F8F9FA;
+  --accent-color: #4D4D4D;
+  --primary-color: #000000;
+  --text-color: #1C1C1C;
+  --select-item-color: #00000015;
+  --select-item-hover: #00000030;
+  
+  --hand-cursor: url("./assets/icons/hand-cursor.png"), auto;
+} */
+
+/* :root {
+  --background-color: #1C1C1C;
+  --accent-color: #FFFFFF;
+  --primary-color: #E0E0E0;
+  --text-color: #F8F9FA;
+  --select-item-color: #FFFFFF15;
+  --select-item-hover: #FFFFFF30;
+  --hand-cursor: url("./assets/icons/hand-cursor.png"), auto;
+} */
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* similar to apple font */
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  /* Google font */
+  font-family: Google Sans, Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  cursor: url("./assets/icons/cursor.png"), auto;
+}

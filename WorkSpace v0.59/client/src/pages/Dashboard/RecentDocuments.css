@@ -1,0 +1,107 @@
+.recent-documents-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  overflow: hidden;
+}
+
+.recent-documents-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.recent-documents-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) var(--background-color);
+}
+
+.recent-documents-list::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--background-color);
+}
+
+.recent-documents-list::-webkit-scrollbar-track {
+  background-color: var(--background-color);
+  border-radius: 10px;
+}
+
+.recent-documents-list::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  border: 2px solid var(--background-color);
+}
+
+.recent-documents-list li {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: var(--select-item-color);
+  border-radius: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recent-documents-list li:hover {
+  background-color: var(--select-item-hover);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recent-documents-link {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 500;
+  display: block;
+  height: 100%;
+}
+
+.recent-documents-link:hover {
+  color: var(--text-color);
+}
+
+.recent-documents-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+.recent-documents-name {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.recent-documents-timestamp {
+  color: var(--text-color);
+}
+
+@media screen and (max-width: 768px) {
+  .recent-documents-container {
+    padding: 10px;
+  }
+
+  .recent-documents-title {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .recent-documents-title {
+    font-size: 0.9rem;
+  }
+
+  .recent-documents-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
